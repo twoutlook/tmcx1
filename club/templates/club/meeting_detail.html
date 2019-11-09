@@ -1,0 +1,32 @@
+{% extends 'case005/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<a href='../../'>Back to Index</a>
+<hr>
+<h2> Meeting Record</h2>
+<table class='gridtable'>
+    <tr>
+        <th>Date</th>
+        <td>{{meeting.date1}}</td>
+    </tr>
+
+    <tr>
+        <th>Name</th>
+        <td>{{meeting.name}}</td>
+    </tr>
+    <tr>
+        <th>Member</th>
+        <td>{{meeting.member}}</td>
+    </tr>
+    <tr>
+        <th>Role</th>
+        <td>{{meeting.role}}</td>
+    </tr>
+</table>
+
+
+
+
+{% endblock %}

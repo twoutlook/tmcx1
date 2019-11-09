@@ -1,0 +1,50 @@
+{% extends 'club/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+<hr>
+<div class="jumbotron">
+
+
+    <h3>Purpose</h3>
+    <p>This WebApp is initially designed for Toastmasters club to record meeting attendance and roles taken.
+        Each club will be able to see summary of each meeting.</p>
+
+    <h4>For Club officers</h4>
+    <p> or any interested individual who is going to maintain meeting records,
+        please follow Step 1,2 and 3.</p>
+
+    <h4>
+        For checking current summary,</h4>
+    <p> jump to Step 3 directly.</p>
+
+</div>
+<h2>Step 1, Create a new account</h2>
+<h3>
+    <ul style='font-family:  Courier, monospace;'>
+        <!-- <li>user: *** </li>
+        <li>pass: *** </li> -->
+        <li>Link is <a href='account/'>Here</a> </li>
+
+    </ul>
+</h3>
+
+<h2>Step 2, Login and maintain records</h2>
+<h3>
+    <ul style='font-family:  Courier, monospace;'>
+        <li>Link is <a href='data/'>Here</a> </li>
+    </ul>
+</h3>
+
+
+<h2>Step 3, Check Results</h2>
+<h3>
+    <ul style='font-family:  Courier, monospace;'>
+
+        <li>Link is <a href='club/'>Here</a> </li>
+
+    </ul>
+</h3>
+
+
+{% endblock %}

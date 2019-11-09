@@ -1,0 +1,17 @@
+{% extends 'case005/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<a href='../'>Back to Index</a>
+<hr>
+<h2>Add Meeting Record</h2>
+
+<form action="/your-name/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+
+{% endblock %}
