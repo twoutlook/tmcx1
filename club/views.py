@@ -3,6 +3,12 @@ from django.db.models import Count, Sum, Max, Min
 import re
 from .models import Data2
 from .models import Best
+
+from .models import Club
+from .models import ClubDate
+
+
+
 from django.shortcuts import redirect
 
 # https://pypi.org/project/django-pivot/
@@ -14,8 +20,8 @@ def getHtml(html):
     return app+'/'+html+'.html'
 
 def index(request):
-    # list1 = Data2.objects.exclude(role='---').exclude(role='Absence').values('date1','member').annotate(headcnt=Count('id'))
-    context = {'list1': []}
+    list1 = ClubDate.objects.values('club','club__name').annotate(datecnt=Count('date1'))
+    context = {'list1': list1}
     # return render(request, 'case002/index.html', context)
     return render(request, getHtml('index'), context)
     

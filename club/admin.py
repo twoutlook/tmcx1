@@ -6,9 +6,11 @@ from import_export.admin import ImportExportModelAdmin
 
 # from .models import Data1
 from .models import Club
+from .models import Role
 from .models import ClubDate
 from .models import ClubMember
 from .models import Attd
+from .models import AttdRole
 
 
 
@@ -40,6 +42,19 @@ class ClubAdmin(ImportExportModelAdmin):
     # search_fields = ['date1']
    
 admin.site.register(Club, ClubAdmin)
+
+class RoleResource(resources.ModelResource):
+    class Meta:
+        model = Role
+
+class RoleAdmin(ImportExportModelAdmin):
+    resource_class = RoleResource
+    list_display = ('name',)
+    # fields = ('date1','name', 'member','role')
+    # list_filter = ['name','role','member']
+    # search_fields = ['date1']
+   
+admin.site.register(Role, RoleAdmin)
 
 class ClubDateResource(resources.ModelResource):
     class Meta:
@@ -80,6 +95,19 @@ class AttdAdmin(ImportExportModelAdmin):
    
 admin.site.register(Attd, AttdAdmin)
 
+
+class AttdRoleResource(resources.ModelResource):
+    class Meta:
+        model = AttdRole
+
+class AttdRoleAdmin(ImportExportModelAdmin):
+    resource_class = AttdRoleResource
+    list_display = ('attd','role')
+    # fields = ('date1','name', 'member','role')
+    list_filter = ['role',]
+    # search_fields = ['attd__name',]
+   
+admin.site.register(AttdRole, AttdRoleAdmin)
 
 
 

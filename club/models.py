@@ -48,6 +48,31 @@ class Attd(models.Model):
         unique_together = ('clubdate', 'clubmember')
         verbose_name ="Attendance"
         verbose_name_plural ="Attendance"
+    def __str__(self):
+        return "["+str(self.clubdate.date1) +"] "+ self.clubmember.member
+
+class Role(models.Model):
+    name = models.CharField(max_length=32,unique = True)
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name ="Roles"
+        verbose_name_plural ="Roles"
+
+class AttdRole(models.Model):
+    attd = models.ForeignKey(
+        Attd, on_delete=models.CASCADE)
+    role = models.ForeignKey(
+        Role, on_delete=models.CASCADE)
+    class Meta:
+        unique_together = ('attd', 'role')
+        verbose_name ="Attd Role"
+        verbose_name_plural ="Attd Role"
+
+
+# https://www.toastmasters.org/membership/club%20meeting%20roles.aspx
 
 
 class Data2(models.Model):
