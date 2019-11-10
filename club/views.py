@@ -5,7 +5,12 @@ from .models import Data2
 from .models import Best
 
 from .models import Club
+
 from .models import ClubDate
+from .models import ClubMember
+from .models import Attd
+from .models import AttdRole
+
 
 
 
@@ -24,7 +29,67 @@ def index(request):
     context = {'list1': list1}
     # return render(request, 'case002/index.html', context)
     return render(request, getHtml('index'), context)
+
+def club_pk(request,pk):
+    obj = Club.objects.get(pk=pk)
+    key ={'obj':obj}
+    # list1 = ClubDate.objects.filter(club__pk=pk).values('date1').annotate(headcnt=Count('member',distinct=True)).order_by('date1')
+    list1 = Attd.objects.filter(clubdate__club__pk=pk).values('clubdate','clubdate__date1').annotate(headcnt=Count('clubmember',distinct=True))
     
+    
+    context = {'list1': list1,'key': key}
+    # return render(request, 'case002/index.html', context)
+    return render(request, getHtml('club_pk'), context)
+
+
+def club_pk_clubdate_attd(request,pk,clubdate):
+    club = Club.objects.get(pk=pk)
+    clubdate = ClubDate.objects.get(pk=clubdate)
+    
+    key ={'club':club,'clubdate':clubdate.date1}
+    # list1 = ClubDate.objects.filter(club__pk=pk).values('date1').annotate(headcnt=Count('member',distinct=True)).order_by('date1')
+    list1 = Attd.objects.filter(clubdate=clubdate).order_by('clubmember__member')
+    
+    
+    context = {'list1': list1,'key': key}
+    # return render(request, 'case002/index.html', context)
+    return render(request, getHtml('club_pk_clubdate_attd'), context)
+
+
+def club_pk_clubdate_attdrole(request,pk,clubdate):
+    club = Club.objects.get(pk=pk)
+    clubdate = ClubDate.objects.get(pk=clubdate)
+    
+    key ={'club':club,'clubdate':clubdate.date1}
+    
+    list1 = Attd.objects.filter(clubdate=clubdate).order_by('clubmember__member')
+    
+    
+    context = {'list1': list1,'key': key}
+    # return render(request, 'case002/index.html', context)
+    return render(request, getHtml('club_pk_clubdate_attdrole'), context)
+
+
+def club_pk_clubdate_role(request,pk,clubdate):
+    club = Club.objects.get(pk=pk)
+    clubdate = ClubDate.objects.get(pk=clubdate)
+    
+    key ={'club':club,'clubdate':clubdate.date1}
+    
+    list1x = AttdRole.objects.filter(attd__clubdate=clubdate).order_by('role__name','attd__clubmember__member')
+    list1 = AttdRole.objects.filter(attd__clubdate=clubdate).values('role','role__name').annotate(cnt=Count('attd__clubmember__member')).order_by('role__name')
+    for x in list1:
+        list2 = AttdRole.objects.filter(attd__clubdate=clubdate,).filter(role=x['role']).order_by('attd__clubmember__member')
+        x['members']=list2
+        print(x)
+
+    
+    context = {'list1': list1,'key': key}
+    # return render(request, 'case002/index.html', context)
+    return render(request, getHtml('club_pk_clubdate_role'), context)
+
+
+
 def s1(request):
     list1 = Data2.objects.exclude(role='---').exclude(role='Absence').values('date1','member').annotate(headcnt=Count('id'))
     

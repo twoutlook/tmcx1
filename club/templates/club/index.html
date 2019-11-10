@@ -8,22 +8,26 @@ Club Index
 
 {% block content %}
 <table class='gridtable'>
-<tr><th></th><th>Club Name</th><th>Meeting Count</th></tr>
+    <tr>
+        <th></th>
+        <th>Club </th>
+        <!-- <th>Count</th> -->
+    </tr>
     {% for x in list1 %}
     <tr>
         <th>{{forloop.counter}}</th>
-        <td>{{x.club}}
-            {{x.club__name}}
+        <td><a href='{{x.club}}' /> {{x.club__name}}</a>
         </td>
-        <td>
+        <!-- <td align='right'>
             {{x.datecnt}}
-        </td>
+        </td> -->
 
 
     </tr>
 
     {% endfor  %}
 </table>
-
+<!-- <br>
+<i>Note: Count is Meeting Numbers in this app.</i> -->
 
 {% endblock %}

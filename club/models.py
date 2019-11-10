@@ -46,8 +46,8 @@ class Attd(models.Model):
         ClubMember, on_delete=models.CASCADE, verbose_name="Club Member")
     class Meta:
         unique_together = ('clubdate', 'clubmember')
-        verbose_name ="Attendance"
-        verbose_name_plural ="Attendance"
+        verbose_name ="Attd"
+        verbose_name_plural ="Attd"
     def __str__(self):
         return "["+str(self.clubdate.date1) +"] "+ self.clubmember.member
 

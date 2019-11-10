@@ -1,0 +1,52 @@
+{% extends 'portal/basefluid_app.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block page_name %}
+{{key.club}}&nbsp;
+{{key.clubdate}} Attd-Role
+
+{% endblock  %}
+
+{% block go_up  %}
+<a class='btn btn-info' href='../../'>Back to Up Level </a>
+{% endblock %}
+
+{% block content %}
+<table class='gridtable'>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Roles</th>
+    </tr>
+    {% for x in list1 %}
+    <tr>
+        <th>{{forloop.counter}}</th>
+
+        <td>{{x.clubmember.member}}
+        <td>
+            {% if x.clubmember.is_member %}
+                Member
+            {% else %}
+            Guest
+            {% endif %}
+            
+        </td>
+        <td>
+            {% for x2 in x.attdrole_set.all %}
+            &nbsp;* {{ x2.role}}
+            <br>
+
+            {% endfor %}
+        
+        </td>
+
+    </tr>
+
+    {% endfor  %}
+</table>
+
+
+
+{% endblock %}

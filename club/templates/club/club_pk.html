@@ -1,0 +1,45 @@
+{% extends 'portal/basefluid_app.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block page_name %}
+{{key.obj}}
+{% endblock  %}
+
+{% block content %}
+<table class='gridtable'>
+    <tr>
+        <th></th>
+        <th>Meeting</th>
+        <!-- <th>Cnt</th> -->
+        <th>Attd</th>
+        <th>Attd-Role</th>
+        <th>Role</th>
+        
+    </tr>
+    {% for x in list1 %}
+    <tr>
+        <th>{{forloop.counter}}</th>
+
+        <td>{{x.clubdate__date1}}</a>
+        </td>
+        <!-- <td align='right'>
+                {{x.headcnt}}
+        </td> -->
+        <td><a href='{{x.clubdate}}/attd/'> Attd</a>
+        </td>
+        <td><a href='{{x.clubdate}}/attdrole/'> Attd-Role</a>
+        </td>
+        <td><a href='{{x.clubdate}}/role/'> Role</a>
+        </td>
+       
+    </tr>
+
+    {% endfor  %}
+</table>
+<br>
+<i>Note: Count is Head Count of given meeting in this app.</i>
+
+
+
+{% endblock %}

@@ -3,6 +3,11 @@ from . import views
 app_name = 'club'
 
 urlpatterns = [
+    path('<int:pk>/', views.club_pk, name='club_pk'),
+    path('<int:pk>/<int:clubdate>/attd/', views.club_pk_clubdate_attd, name='club_pk_clubdate_attd'),
+    path('<int:pk>/<int:clubdate>/attdrole/', views.club_pk_clubdate_attdrole, name='club_pk_clubdate_attdrole'),
+    path('<int:pk>/<int:clubdate>/role/', views.club_pk_clubdate_role, name='club_pk_clubdate_role'),
+
     path('meeting/new/', views.meeting_new, name='meeting_new'),
     path('meeting/<int:pk>/', views.meeting_detail, name='meeting_detail'),
     path('meeting/<int:pk>/edit/', views.meeting_edit, name='meeting_edit'),
