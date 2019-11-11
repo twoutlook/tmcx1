@@ -48,7 +48,17 @@
   - Which meeting did I attend
   - Which role did I take
   - Did I also participate table topic
-  - My Pathway detail
+  - My Pathway details
+  
+## Apply a github account
+- Like you have a WeChat account
+- It's free of charge
+- Somewhere to keep your prepared speech
+- Public and/or private repository
+- Ready to join this project, to build our Toastmaster club application
+  - to record and track our personal development
+  - to start our club officially 
+  - to grow our club successfully
 
 
 
