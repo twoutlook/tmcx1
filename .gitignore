@@ -12,6 +12,9 @@ __pycache__
 # 先期由本地主導時，仍然上傳
 /db.sqlite3
 
+# put some Toastmasters vide
+/video
+
 # 根據實做經驗，
 # 本地能放幾個最近的數據庫是比較方便的。
 # /db_backup
