@@ -38,9 +38,11 @@
 - to track club activities
   
   - Each Meeting
-    - Attendance （SAA）
-    - Role Taken （VPE）
-    - Pathways Speeches (VPE)
+    - Attendance （SAA Sergeant-At-Arms, VP Membership, VP Public Relations, Secretary, and President）
+    - Role Taken （VP Education）
+    - Pathways Speeches (VP Education)
+    - Determine Membership (Treasurer)
+    
 - to track personal activities
  
   - Which meeting did I attend
