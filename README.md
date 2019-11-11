@@ -42,6 +42,10 @@
     - Role Taken （VP Education）
     - Pathways Speeches (VP Education)
     - Determine Membership (Treasurer)
+  - Each Member and Guest
+  - Other activities
+    - 2019-11-10, at John's office, 18F of Goden Eagle building,
+    - Ben, Lisa and John for upcoming U5 contest 
     
 - to track personal activities
  
