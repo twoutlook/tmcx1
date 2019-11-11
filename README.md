@@ -14,7 +14,20 @@
 去年我很認真按新的教育體系 Pathway 進行，我選了其它一個 IP, Innovative Planning，當進入LEVEL 5時，發現不知道該怎麼進行，於是又加開了PM, Presentation Mastery。
 
 ### Hard to reach Toastmaster Club.
-由於個人原因，去年過年期間在台灣待的時間較長，今年年初回到昆山後，進行緩慢，6月到湖北待了四個多月。
+由於個人原因，去年過年期間在台灣待的時間較長，今年年初回到昆山後，進行緩慢。
+6月到湖北待了四個多月，透過群裡的信息，得知 KS WEST，在鄂州鄉下地方到武汉超過 50KM，很不方便，費用太高。
+
+### Back to Kunshan to attend Fun+ and West
+兩個Club 的 SAA，Ben and HY, 大力協助。還有 Robben 和 Shawn 在不同方面的支持。
+ - Fun+, 2019-06-05, 起 20次 meetings
+ - West, 2019-11-07, 幾天前 HY 回補了到第一次的 2019-08-15
+ 
+## Appeal to build an Application for Toastmaster Club
+### to track club activities
+### to track personal activities
+
+
+
 
 
 
