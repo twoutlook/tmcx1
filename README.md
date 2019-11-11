@@ -36,15 +36,17 @@
 ## Appeal to build an Application for Toastmaster Club
 
 - to track club activities
- - Each Meeting
-   - Attendance （SAA）
-   - Role Taken （VPE）
-   - Pathways Speeches (VPE)
+  
+  - Each Meeting
+    - Attendance （SAA）
+    - Role Taken （VPE）
+    - Pathways Speeches (VPE)
 - to track personal activities
- - Which meeting did I attend
- - Which role did I take
- - Did I also participate table topic
- - My Pathway detail
+ 
+  - Which meeting did I attend
+  - Which role did I take
+  - Did I also participate table topic
+  - My Pathway detail
 
 
 
